@@ -2,8 +2,8 @@
 
  *    Photo gallery
  *    Variables and functions
- *    Author: 
- *    Date:   
+ *    Author: Alex A Somoza 
+ *    Date: 8-14-19  
 
  *    Filename: photos.js
  */
@@ -12,6 +12,11 @@
 
 /* global variables */
 var photoOrder = [1,2,3,4,5];
+
+function populateFigures() {
+   var filename;
+   var currentFig;
+}
 
 /* shift all images one figure to the left, and change values in photoOrder array to match  */
 function rightArrow() {
@@ -41,6 +46,29 @@ function leftArrow() {
 function zoomFig() {
    
 }
+
+/* Creates event listeners when the page loads. */
+function createEventListeners() {
+   var leftarrow = document.getElementById("leftarrow");
+    if (leftarrow.addEventListener) {
+        leftarrow.addEventListener("click", leftArrow, false);
+    } else if (leftarrow.attachEvent) {
+        leftarrow.attachEvent("onclick", leftArrow);
+    }
+   var rightarrow = document.getElementById("rightarrow");
+      if (rightarrow.addEventListener) {
+        rightarrow.addEventListener("click", rightArrow, false);
+    } else if (rightarrow.attachEvent) {
+        rightarrow.attachEvent("onclick", rightArrow);
+    }
+   var mainFig = document.getElementsByTagName("img")[1];
+    if (mainFig.addEventListener) {
+       mainFig.addEventListener("click", zoomFig, false);
+    } else if(mainFig.attachEvent) {
+       mainFig.attachEvent("onclick",zoomFig);
+    }
+}
+
 
 /* create event listeners and populate image elements */
 function setUpPage() {
