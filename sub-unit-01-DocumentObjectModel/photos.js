@@ -82,7 +82,18 @@ function previewFive() {
    document.getElementsByTagName("img")[0].src = "images/IMG_0" + photoOrder[0] + "sm.jpg";
    document.getElementsByTagName("img")[4].src = "images/IMG_0" + photoOrder[4] + "sm.jpg";
    figureCount = 5;
+   var numberButton = document.querySelector("#fiveButton p");
+   numberButton.innerHTML = "Show fewer images";
+   if (numberButton.addEventListener) {
+      numberButton.detachEvent("onclick", previewFive, false);
+      numberButton.attachEvent("onclick", previewThree, false);
+   } else if (numberButton.attachEvent) {
+      numberButton.detachEvent("onclick", previewFive);
+      numberButton.attachEvent("onclick", previewThree);
+   }
 }
+
+
 
 /* open center figure in separate window */
 function zoomFig() {
