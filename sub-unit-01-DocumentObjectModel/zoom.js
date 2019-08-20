@@ -2,8 +2,8 @@
 
  *    Photo zoom
  *    Variables and functions
- *    Author: 
- *    Date:   
+ *    Author: Alex A. Somoza
+ *    Date: 8-19-19  
 
  *    Filename: zoom.js
  */
@@ -16,7 +16,23 @@ var figFilename = "images/IMG_0" + photoOrderArray[2] + ".jpg";
 
 /* populate img element and create event listener */
 function pageSetup() {
-   document.getElementsByTagName("img")[0].src = figFilename; // assign filename to img element
+    document.getElementsByTagName("img")[0].src = figFilename; // assign filename to img element
+    createEventListener();
+}
+
+// Sets up the close window function
+function closeWin() {
+    window.close();
+}
+
+// creates event listener for the window to close
+function createEventListener() {
+    var closeWindowDiv = document.getElementsByTagName("p")[0];
+    if (closeWindowDiv.addEventListener) {
+        closeWindowDiv.addEventListener("click", closeWin, false);
+    } else if (closeWindowDiv.attachEvent) {
+        closeWindowDiv.attachEvent("onclick", closeWin);
+    }
 }
 
 /* add img src value and create event listener when page finishes loading */
