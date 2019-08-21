@@ -4,6 +4,8 @@ I feel that I am slightly ok in JavaScript programming. I have a basic understan
 
 Please describe in detail the types of "bugs" a coder can expect to encounter when coding a web page with JavaScript. Describe the techniques you have learned to resolve the types of bugs that we have examined so far. Quote an outside source containing information on resolving this type of bug.
 
+There are three types of bugs a coder can deal with in JavaScript. These are syntax errors, logic errors, and run-time errors. I know about setting breakpoints, and setting up alerts or console logs to try and find the source of these errors.
+
 Please describe in detail, in your own words, the difference between syntax bugs and logic bugs. Describe the differences in technique in the way that they are resolved. Use an outside source to provide additional information that is relevant to this particular subject matter.
 
 Please describe in detail, in your own words, the three different techniques that we have learned so far to resolve logic bugs. What are the advantages and disadvantages of each method?  For this bell work, you do not need to use an outside source to provide additional information that is relevant to this particular subject matter.
