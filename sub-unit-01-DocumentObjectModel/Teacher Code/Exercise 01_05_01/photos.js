@@ -23,6 +23,7 @@ function populateFigures() {
     if (figureCount === 3) {
         for (var i = 1; i < 4; i++) {
             filename = "images/IMG_0" + photoOrder[i] + "sm.jpg";
+            // "images/IMG_01sm.jpg"
             currentFig = document.getElementsByTagName("img")[i - 1];
             currentFig.src = filename;
         }
